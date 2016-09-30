@@ -1,0 +1,141 @@
+/* 
+Daniel Ermer, CS336
+Lab4Style.css, a simple file to set the style for a simple webpage
+*/
+
+/*Change strong color to red*/
+strong {
+   color: #f00; font: 32px "Comic Sans MS", cursive;
+}
+
+/*Change .carrot to orange
+.carrot {
+   color: #fa7;
+}*/
+
+.spinach {
+   color: #0f0;
+}
+
+#first {font-style: italic;}
+
+p {
+   color: #00f;
+}
+
+p:before{
+   content: url("Yellow-pin.png");
+}
+
+/* change the font to comic sans */
+body {
+   background: url("Blue-rule.png");
+   font: 16px "Comic Sans MS", cursive;
+}
+
+/*List Part*/
+h3 {border-top: 1px solid gray;}
+
+h3.numbered {counter-reset: mynum;}
+ 
+p.numbered:before {
+  content: "(" counter(mynum, upper-latin) ") ";
+  counter-increment: mynum;
+  font-weight: bold;
+}
+
+ul{
+   border: 10px solid lightblue;
+   width: 100px;
+   list-style: lower-roman;
+}
+
+#fixed-pin  {
+  position:fixed;
+  top: 3px;
+  right: 3px;
+}
+
+/* Table Part*/
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+}
+
+#demo-table > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #4ca;
+  margin-bottom: .5em;
+}
+
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+}
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+}
+
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+}
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+}
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+}
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+}
+
+#demo-table tbody th:after {
+  content: ":";
+}
+
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+}
+
+#demo-table tfoot th {
+  color: blue;
+}
+
+#demo-table tfoot th:after {
+  content: ":";
+}
+
+#demo-table > tfoot td {
+  background-color: #cee;
+}
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+}
+
+#demo-table tbody td {
+  border:1px solid #7a7;
+}
+
