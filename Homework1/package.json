@@ -1,0 +1,11 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Homework1.js",
+  "scripts": {
+    "start": "node Homework1.js"
+  },
+  "author": "dee7",
+  "license": "ISC"
+}
