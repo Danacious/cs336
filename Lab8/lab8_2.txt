@@ -1,0 +1,31 @@
+Daniel Ermer
+lab8_2.txt, answers to the questions in 8.2 of lab 8
+
+A:
+ i. For a UI to be "composable" means that you can return a tree of elements. This is highly useful
+    in maintaining a webpage because if you change one part of the tree, that doesn't mean you have
+    to change the entire thing.
+
+ ii. JSX is used to "render" components that are made using React. It is not required though, so
+     you can just us JavaScript.
+
+ iii. The data is first loaded by the server from the comments.js file. Data can then be created
+      based on what the user of the site enters and React's system of components and saved into
+      the comments.js file once the user has submited the information.
+
+ iv. Being immutable means that once a component renders itself it is "owned by the parent" and, 
+     for the most part, can't be changed. To be able to interact with a component it needs to be
+     mutable which is why we use this.setState
+
+B:
+ i. I you change the comments.js file and save it the webpage will update without needing the
+    webpage to refresh. I think this happens because the server is keeping a constant eye on
+    the state of the file and will keep loading what is there.
+
+ ii. React will only render components once, so it needs to load everything in before it will render
+     and be visable to the user
+
+ iii. An outdated state of view could lead to false/bad information
+
+ iv. It does seem foolish to just accept any comment that is generated. I'm pretty sure if the server
+     doesn't accept a comment the entire system shuts down.
