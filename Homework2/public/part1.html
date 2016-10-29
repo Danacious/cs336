@@ -1,0 +1,37 @@
+<!--
+   HTML Form for entering data
+   Author: Daniel Ermer
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>Part 1</title>
+        <h1>Entering Data:</h1>
+	<script src="part1.js" /></script>
+        <link rel="stylesheet" href="part1Style.css" />
+    </head>
+    <body>
+        <form action="/addperson" method="post">
+            <div>
+                <label for="loginID">ID:</label>
+                <input type="text" id="message" name="code" />
+            </div>
+            <div>
+               <label for="firstName">First Name:</label>
+               <input type="text" id="message" name="firstName" />
+            </div>
+            <div>
+               <label for="lastName">Last Name:</label>
+               <input type="text" id="message" name="lastName" />
+            </div>
+            <div>
+               <label for="startDate">Start Date:</label>
+               <input type="text" id="message" name="startDate" />
+            </div>
+            <div class="button">
+                <button type="submit">Submit Data</button>
+            </div>
+        </form>
+    </body>
+</html>
