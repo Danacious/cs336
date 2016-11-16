@@ -1,0 +1,25 @@
+<!--
+   HTML Form for searching through a database
+   Author: Daniel Ermer
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>Part 2</title>
+        <h1>Search the Data:</h1>
+        <script src="part2.js"></script>
+        <link rel="stylesheet" href="part2Style.css" />
+    </head>
+    <body>
+        <form action="/search" method="post">
+            <div>
+                <label for="code">ID:</label>
+                <input type="text" id="code" name="searchID" />
+            </div>
+            <div class="button">
+                <button type="submit">Search Data</button>
+            </div>
+        </form>
+    </body>
+</html>

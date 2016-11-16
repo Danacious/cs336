@@ -1,0 +1,47 @@
+<!--
+   HTML Form for entering data
+   Author: Daniel Ermer
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Part 1</title>
+        <script src="part1.js" /></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="part1Style.css" />
+        <script src="//code.jquery.com/jquery-latest.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js"></script>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script type="text/babel" src="example.js"></script>
+        <form action="/addperson" method="post">
+            <div>
+                <label for="loginID">ID:</label>
+                <input type="text" id="message" name="code" />
+            </div>
+            <div>
+               <label for="firstName">First Name:</label>
+               <input type="text" id="message" name="firstName" />
+            </div>
+            <div>
+               <label for="lastName">Last Name:</label>
+               <input type="text" id="message" name="lastName" />
+            </div>
+            <div>
+               <label for="startDate">Start Date:</label>
+               <input type="text" id="message" name="startDate" />
+            </div>
+            <div class="button">
+                <button type="submit">Submit Data</button>
+            </div>
+        </form>
+    </body>
+</html>
