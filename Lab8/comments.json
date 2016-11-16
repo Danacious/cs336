@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "id": 1479256023608,
         "author": ";lkj",
         "text": "kjgh"
@@ -8,5 +9,20 @@
         "id": 1479258433402,
         "author": "ht34",
         "text": "Fun"
+=======
+        "id": 1388534400000,
+        "author": "Pete Hunt",
+        "text": "Hey there!"
+    },
+    {
+        "id": 1420070400000,
+        "author": "Paul O’Shannessy",
+        "text": "React is <em>great</em>!"
+    },
+    {
+        "id": 14649887637,
+        "author": "evil",
+        "text": "<a href=\"javascript:alert(1)\">alert(1)</a>"
+>>>>>>> 97152e035e755dc6013966d10bf513de0062a91e
     }
 ]

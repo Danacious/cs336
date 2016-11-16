@@ -1,0 +1,11 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Lab3.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "dee7",
+  "license": "ISC"
+}

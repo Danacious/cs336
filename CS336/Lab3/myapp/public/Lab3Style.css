@@ -1,0 +1,22 @@
+/* 
+Daniel Ermer, CS336
+Lab3Style.css, a simple file to set the style for a simple webpage
+*/
+
+/* The basic structure was generated using the sample code for this lab*/
+h1{
+ color: #DAA520;
+ background-color: blue;
+ border: #228B22;
+}
+
+p{
+ color: #FF0000;
+}
+
+li {
+    font-family: "Times New Roman", sans-serif;
+    color: #228B22;
+}
+
+

@@ -70,5 +70,8 @@ function getAge(dateString) {
     }
     return age;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 97152e035e755dc6013966d10bf513de0062a91e

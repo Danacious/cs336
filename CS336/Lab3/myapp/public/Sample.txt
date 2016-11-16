@@ -1,0 +1,2 @@
+This is some sample text that I am using to the the functionality of using static
+files.

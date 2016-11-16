@@ -1,7 +1,11 @@
 {
   "name": "myapp",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "This is a json package for Homework 1",
+=======
+  "description": "",
+>>>>>>> 97152e035e755dc6013966d10bf513de0062a91e
   "main": "Homework1.js",
   "scripts": {
     "start": "node Homework1.js"
