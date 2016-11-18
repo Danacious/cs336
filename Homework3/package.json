@@ -1,7 +1,7 @@
 {
   "name": "myapp",
   "version": "1.0.0",
-  "description": "This is a json package for Homework 2",
+  "description": "This is a json package for Homework 3",
   "main": "server.js",
   "author": "dee7",
   "license": "ISC",
