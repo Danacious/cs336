@@ -1,5 +1,4 @@
 //Daniel Ermer
-//Lab7.js, a js file for learning about jQuery$( document ).ready(function() {
 
 $( 'form' ).submit(function( event ) {
   event.preventDefault();
@@ -8,7 +7,7 @@ $( 'form' ).submit(function( event ) {
 
   $.ajax({
     type: 'POST',
-    url: '/people/:id',
+    url: '/api/people',
     data: form.serialize(),
     dataType: 'json',
     success: function( resp ) {

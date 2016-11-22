@@ -109,7 +109,7 @@ var PeopleForm = React.createClass({
     var firstName = this.state.firstName.trim();
     var lastName = this.state.lastName.trim();
     var startDate = this.state.startDate.trim();
-    if (!id || !firstName || !lastName || !startDate) {
+    if (!firstName || !lastName || !startDate) {
       return;
     }
     this.props.onPersonSubmit({id: id, firstName: firstName, lastName:lastName, startDate:startDate});
@@ -118,9 +118,6 @@ var PeopleForm = React.createClass({
   render: function() {
         return (
             <form className="peopleForm" onSubmit={this.handleSubmit}>
-                <input className="ui-widget ui-corner-all" type="text" placeholder="id..."
-                    value={this.state.id} onChange={this.handleIDChange}
-                />
                 <input className="ui-widget ui-corner-all" type="text" placeholder="First Name..."
                     value={this.state.firstName} onChange={this.handleFirstNameChange}
                 />
