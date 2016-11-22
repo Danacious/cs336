@@ -135,6 +135,6 @@ var PeopleForm = React.createClass({
 
 
 ReactDOM.render(
-    <PersonBox url="/api/people" pollInterval={2000}/>,
+    <PersonBox url="/" pollInterval={2000}/>,
     document.getElementById('content')
 );

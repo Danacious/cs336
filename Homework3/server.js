@@ -54,7 +54,7 @@ app.post('/', function(req, res) {
       startDate: req.body.startDate,
     };
     people.push(newPerson);
-    fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 4), function(err) {
+    fs.writeFile(COMMENTS_FILE, JSON.stringify(people, null, 4), function(err) {
       if (err) {
         console.error(err);
         process.exit(1);
