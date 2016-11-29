@@ -13,20 +13,16 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Redirect, browserHistory } from 'react-router';
+import Remarkable from 'remarkable';
+import $ from 'jquery';
 
 import CommentBox from './commentBox';
-import CommentEdit from './commentEdit';
 
 import '../css/base.css';
 
-ReactDOM.render((
-    <Router history={browserHistory}>
-        <Route path="/" component={CommentBox}/>
-        <Route path="/:id" component={CommentEdit} />
-    </Router>
-), document.getElementById('content')
+ReactDOM.render(
+    <CommentBox url="/api/comments" pollInterval={2000}/>,
+    document.getElementById('content')
 );
