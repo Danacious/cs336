@@ -10,7 +10,6 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -92,15 +91,13 @@ app.delete('/api/comments/:id', function(req, res) {
 app.use('*', express.static(APP_PATH));
 
 app.listen(app.get('port'), function() {
-  console.log('Server started: http://localhost:' + app.get('port') + '/');
+    console.log('Server started: http://localhost:' + app.get('port') + '/');
 });
 
-fs.readFile(path.join(__dirname, '.passwordrc'), function(err, password) {
+// This assumes that the MongoDB password has been set as an environment variable.
+var mongoURL = 'mongodb://cs336:bjarne@ds053295.mlab.com:53295/cs336';
+MongoClient.connect(mongoURL, function(err, dbConnection) {
     if (err) throw err;
-    var mongoURL = 'mongodb://cs336:bjarne@ds053295.mlab.com:53295/cs336';
-    MongoClient.connect(mongoURL, function(err, dbConnection) {
-        if (err) throw err;
-        db = dbConnection;
-    });
+    db = dbConnection;
 });
 
