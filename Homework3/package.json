@@ -1,17 +1,35 @@
 {
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "This is a json package for Homework 3",
+  "name": "homework-3",
+  "version": "0.0.0",
+  "private": true,
+  "license": "see LICENSE file",
+  "description": "React implimentation of the homework.",
   "main": "server.js",
-  "author": "dee7",
-  "license": "ISC",
-
-  "scripts": {
-    "start": "node server.js"
-  },
-  
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "body-parser": "^1.4.3",
+    "css-loader": "^0.25.0",
+    "express": "^4.4.5",
+    "html-webpack-plugin": "^2.24.0",
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "mongodb": "^2.2.11",
+    "postcss-loader": "^1.0.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "remarkable": "^1.7.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "build": "webpack --progress",
+    "dev": "node server.js & webpack-dev-server --progress",
+    "start": "node server.js"
   }
 }

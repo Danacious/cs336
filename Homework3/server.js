@@ -13,8 +13,7 @@ var db;
 var COMMENTS_FILE = path.join(__dirname, 'peopleList.json');
 
 //allow the server access to the public folder
-app.use('/', express.static(path.join(__dirname, 'public')));
-
+app.use('/', express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -25,43 +24,6 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-cache');
     next();
-});
-
-app.get('/', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    res.json(JSON.parse(data));
-  });
-});
-
-app.post('/', function(req, res) {
-  fs.readFile(COMMENTS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    var people = JSON.parse(data);
-    // NOTE: In a real implementation, we would likely rely on a database or
-    // some other approach (e.g. UUIDs) to ensure a globally unique id. We'll
-    // treat Date.now() as unique-enough for our purposes.
-    var newPerson = {
-      id: req.body.id,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      startDate: req.body.startDate,
-    };
-    people.push(newPerson);
-    fs.writeFile(COMMENTS_FILE, JSON.stringify(people, null, 4), function(err) {
-      if (err) {
-        console.error(err);
-        process.exit(1);
-      }
-      res.json(people);
-    });
-  });
 });
 
 MongoClient.connect('mongodb://cs336:bjarne@ds053295.mlab.com:53295/cs336', function (err, db) {
@@ -98,14 +60,17 @@ app.post('/api/people', function(req, res) {
     });
 });
 
-var mongoURL = 'mongodb://cs336:bjarne@ds053295.mlab.com:53295/cs336';
-MongoClient.connect(mongoURL, function(err, dbConnection) {
-    if (err) throw err;
-    db = dbConnection;
-});
-
 app.listen(app.get('port'), function() {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
+});
+
+fs.readFile(path.join(__dirname, '.passwordrc'), function(err, password) {
+    if (err) throw err;
+    var mongoURL = 'mongodb://cs336:bjarne@ds053295.mlab.com:53295/cs336';
+    MongoClient.connect(mongoURL, function(err, dbConnection) {
+        if (err) throw err;
+        db = dbConnection;
+    });
 });
 
 
